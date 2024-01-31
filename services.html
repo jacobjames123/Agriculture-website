@@ -1,0 +1,237 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+    <nav>
+        <div class="logo"> <!-- Your logo or site name here -->
+            <a href="Home.html">Agro</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <!-- <li><a href="#">Login/Register</a></li> -->
+        </ul>
+        <button id="loginRegisterLink" class="login-popup">Login</button>
+    </nav>
+</header>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>welcome back</h2>
+        <div class="container">
+            <div class="form-container">
+                
+                <div class="login-form">
+                    <h2>Login</h2>
+                    <form action="login.php" method="post">
+                        <label for="login-username">Username:</label>
+                        <input type="text" id="login-username" name="login-username" required>
+
+                        <label for="login-password">Password:</label>
+                        <input type="password" id="login-password" name="login-password" required>
+
+                        <button type="submit">Login</button>
+                        <button id="showRegisterModal" class="register-button">Register</button>
+                    </form>
+                </div> 
+
+                <!-- registration Form -->
+                <div class="registration-form" style="display: none;">
+                    <h2>Register</h2>
+                    <form action="register.php" method="post">
+                        <label for="reg-username">Full Name:</label>
+                        <input type="text" id="reg-username" name="reg-username" required>
+
+                        <label for="reg-email">Email:</label>
+                        <input type="email" id="reg-email" name="reg-email" required>
+
+                        <label for="reg-password">Password:</label>
+                        <input type="password" id="reg-password" name="reg-password" required>
+
+                        <button type="submit">Register</button>
+                        <a href="#" id="loginLink">Already have an account? Login</a>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<section id="services1" class="section">
+    <div class="container">
+        
+            <h1>Welcome to Our Services</h1>
+            <p>Your Success, Our Priority.</p>
+
+        </div>
+</section>        
+
+<section id="services" class="section">
+    <div class="container">
+        <div class="section-heading">
+            <h2>Our Services</h2>
+            <p>Explore the range of services we offer to promote sustainable agriculture.</p>
+        </div>
+        <div class="services">
+            <div class="service">
+                <div class="service-icon">
+                    <img src="Images/icons8-eco.gif" alt="Eco-Friendly Crop Management Icon">
+                </div>
+                <h3>Eco-Friendly Crop Management</h3>
+                <p>Our experts provide guidance on sustainable crop management practices, minimizing the use of harmful chemicals and promoting natural pest control methods. Learn how to maintain healthy and resilient crops while safeguarding the environment.</p>
+            </div>
+            <div class="service">
+                <div class="service-icon">
+                    <img src="Images/icons8-soil-49.png" alt="Soil Health Assessment Icon">
+                </div>
+                <h3>Soil Health Assessment</h3>
+                <p>Discover the secrets of maintaining fertile and healthy soils. Our soil health assessments help farmers optimize their soil conditions, leading to increased yields and better crop quality without compromising the environment.</p>
+            </div>
+            <div class="service">
+                <div class="service-icon">
+                    <img src="Images/icons8-pest-48.png" alt="Natural Pest Control Icon">
+                </div>
+                <h3>Natural Pest Control</h3>
+                <p>We specialize in natural pest control methods that protect your crops without harming the environment. Say goodbye to chemical pesticides and embrace sustainable solutions for pest management.</p>
+            </div>
+            <!-- Add three more services with similar structure -->
+            <div class="service">
+                <div class="service-icon">
+                    <img src="Images/icons8-agriculture-48.png" alt="Crop Health Analysis Icon">
+                </div>
+                <h3>Crop Health Analysis</h3>
+                <p>Our advanced crop health analysis tools and techniques help you monitor the well-being of your crops. Detect issues early and take preventive measures to ensure a bountiful harvest.</p>
+            </div>
+            <div class="service">
+                <div class="service-icon">
+                    <img src="Images/icons8-water-50.png" alt="Sustainable Irrigation Icon">
+                </div>
+                <h3>Sustainable Irrigation</h3>
+                <p>Optimize your water usage with our sustainable irrigation solutions. Ensure that your crops receive the right amount of water while conserving this precious resource for the future.</p>
+            </div>
+            <div class="service">
+                <div class="service-icon">
+                    <img src="Images/icons8-fertilizer-64.png" alt="Organic Fertilizers Icon">
+                </div>
+                <h3>Organic Fertilizers</h3>
+                <p>Enhance soil fertility and crop nutrition with our organic fertilizers. These eco-friendly alternatives provide essential nutrients to your plants while enriching the soil.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials" class="section">
+    <div class="container">
+        <h2>Customer Reviews</h2>
+        <div class="testimonial">
+            <div class="testimonial-image">
+                <img src="Images/Antoine_Griezmann.jpg" alt="Customer 1">
+            </div>
+            <div class="testimonial-content">
+                <p>Agro has been a game-changer for my family's farm.
+                 Their expertise in sustainable agriculture practices has not only increased our crop yields but also improved the overall health of our soil.</p>
+                <p class="customer-name">Griezmann</p>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <div class="testimonial-image">
+                <img src="Images/Bale.jpg" alt="Customer 2">
+            </div>
+            <div class="testimonial-content">
+                <p>I've been using Agro's soil health assessment services for the past year, and the results speak for themselves. My crops are healthier, and I've reduced my reliance on chemical fertilizers.
+                Thank you Agro</p>
+                <p class="customer-name">Bale</p>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <div class="testimonial-image">
+                <img src="Images/Benzema.jpg" alt="Customer 3">
+            </div>
+            <div class="testimonial-content">
+                <p>Agro's natural pest control solutions have been a game-changer for our organic farm. We used to struggle with pests, but with Agro's guidance, we've successfully shifted to eco-friendly pest management methods. 
+                    Agro's services are a must for any environmentally conscious farmer.</p>
+                <p class="customer-name">Benzema</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Process Section -->
+<section id="service-process" class="section">
+    <div class="container">
+        <h2>Service Process</h2>
+        <div class="process-step">
+            <div class="step-number">1</div>
+            <div class="step-description">
+                <h3>Step 1</h3>
+                <p>Our experts begin by conducting a comprehensive soil analysis on your farm.
+                 We collect soil samples from various locations to assess nutrient levels, pH balance, and overall soil health.</p>
+            </div>
+        </div>
+        <div class="process-step">
+            <div class="step-number">2</div>
+            <div class="step-description">
+                <h3>Step 2</h3>
+                <p>Based on the soil analysis results, we create a customized crop plan for your farm.
+                 This plan includes crop selection, planting schedules, and specific soil amendments to optimize crop health.</p>
+            </div>
+        </div>
+        <div class="process-step">
+            <div class="step-number">3</div>
+            <div class="step-description">
+                <h3>Step 3</h3>
+                <p>We promote sustainable farming practices, including natural pest control methods and eco-friendly irrigation techniques.
+                 Our team provides ongoing support and guidance to implement these practices effectively.</p>
+            </div>
+        </div>
+    </div>
+    <div class="Register-content">
+        
+    <a href="#"   class="cta-button">Register Now</a>
+</div>
+</section>
+
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h1>Agro</h1>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h2>Follow Us</h2>
+                <ul>
+                    <li><a href="#"><img src="images/facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="images/twitter.png" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="images/instagram.png" alt="Instagram"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Agro. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+

@@ -1,0 +1,1292 @@
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Remove margin from the body element */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the header and navigation bar */
+header {
+    background-color: #3EA055; /* Green background color for the header */
+    color: #fff; /* Text color for the header */
+    padding: 20px 0;
+}
+
+nav {
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px; /* Adjust the font size */
+    font-weight: bold;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    position: relative;
+}
+
+.nav-links li {
+    margin-right: 20px; /* Adjust the spacing between menu items */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff; /* Text color for menu items */
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Height of the underline */
+    bottom: 0;
+    left: 0;
+    background-color: #FF9900; /* Color of the underline on hover */
+    transform: scaleX(0); /* Initially, set the width to 0 */
+    transform-origin: right; /* Start the animation from the right */
+    transition: transform 0.3s ease; /* Adjust the transition duration as needed */
+}
+
+/* Trigger the underline animation on hover */
+.nav-links a:hover::before {
+    transform: scaleX(1); /* Expand the underline to full width on hover */
+    transform-origin: left; /* Start the animation from the left */
+}
+
+.nav-links a:hover {
+    color: #FF9900; /* Color when hovering over menu items */
+}
+
+/* Style the login button */
+ .login-popup {
+    display: inline-block; /* Change the display to inline-block */
+    vertical-align: middle; /* Align vertically with other elements */
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login-popup:hover {
+    background-color: #fff;
+    color: #3EA055;
+} 
+
+/* error Message */
+
+.error-message-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.error-message {
+    background-color: #ffdddd;
+    color: #ff0000;
+    padding: 10px;
+    border: 1px solid #ff0000;
+    border-radius: 4px;
+}
+
+/* Style the login and registration forms */
+
+.modal {
+    display: none;
+    position: fixed; /* Fixed positioning */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 999; /* Place it on top of other content */
+}
+
+.modal-content {
+    background-color: #fff; /* Background color for the modal content */
+    width: 80%; /* Adjust the width as needed */
+    max-width: 400px; /* Set a maximum width for the modal content */
+    margin: 80px auto; /* Center the modal vertically and horizontally */
+    padding: 20px;
+    position: relative;
+}
+
+/* Style the close button (X mark) */
+.close {
+    position: absolute;
+    top: 10px; /* Adjust the top distance as needed */
+    right: 10px; /* Adjust the right distance as needed */
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+/* Style the form headings (Login and Register) */
+.modal-content h2 {
+    color: #333; /* Text color */
+    text-align: center;
+}
+
+/* Style form fields (input, textarea, etc.) */
+.modal-content input[type="text"],
+.modal-content input[type="password"],
+.modal-content input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 5px;
+}
+
+/* Style the login and registration buttons */
+.modal-content button {
+    background-color: #3EA055; /* Green background color */
+    color: #fff; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%;
+}
+
+/* Style the buttons on hover */
+.modal-content button:hover {
+    background-color: #FF9900; /* Darker green on hover */
+}
+
+.modal-content .register-button {
+    background-color: #3EA055; /* Orange background color */
+    color: #fff; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%;
+}
+
+/* Style the registration button on hover */
+.modal-content .register-button:hover {
+    background-color: #FF8000; /* Darker orange on hover */
+}
+
+
+.modal-content #loginLink {
+    color: #3EA055; /* Green text color */
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Style the link on hover */
+.modal-content #loginLink:hover {
+    color: #2A7E48; /* Darker green on hover */
+}
+
+
+
+.hero {
+    background-image: url('images/Greenery.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    height: 700px; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: #25442d;
+}
+
+.hero h1 {
+    font-size: 36px; /* Adjust the font size */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px; /* Adjust the font size */
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #3EA055; /* Button background color */
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #FF9900; /* Button background color on hover */
+}
+
+
+/* Search Form */
+/* Search Form */
+#search-form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#search-input {
+    width: 60%;
+    padding: 12px;
+    font-size: 18px;
+    border: 2px solid #3EA055; /* Blue border color */
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#search-input::placeholder {
+    color: #999; /* Light gray placeholder text */
+}
+
+#search-input:focus {
+    border-color: #3EA055; /* Darker blue on focus */
+}
+
+#search-form button {
+    background-color: #3EA055;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 24px;
+    margin-left: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#search-form button:hover {
+    background-color: #FF9900; /* Darker blue on hover */
+}
+
+/* Search Results */
+#search-results {
+    margin-top: 20px;
+}
+
+.search-result {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.search-result h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.search-result p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Styles for No Results Message */
+#search-results p.no-results {
+    color: #f00; /* Red color for no results message */
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+
+
+
+
+
+
+#features {
+    background-color: #F9F9F9; /* Set a background color */
+    margin: 20px 20px;
+    padding: 50px;
+    text-align: center;
+}
+
+/* Style feature cards */
+.feature-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    width: calc(33.33% - 20px); /* Adjust card width as needed */
+   
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: scale(1.05); /* Increase the size slightly on hover */
+}
+
+.feature-card img {
+    max-width: 80px; /* Adjust the icon size */
+    margin-bottom: 10px;
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Style the Achievements section */
+#achievements {
+    background-color: #3EA055; /* Set a background color */
+    color: #fff; /* Text color */
+    margin: 20px 20px;
+    padding: 50px;
+    text-align: center; /* Center-align titles and paragraphs */
+}
+
+#achievements h2, #achievements p {
+    color: #fff;
+}
+
+/* Center-align titles and paragraphs within achievement stats */
+.achievement-stat h3,
+.achievement-stat p {
+   
+    text-align: center;
+}
+
+/* Style achievement stats */
+.achievement-stats {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 ; /* Adjust negative margin to keep stats within the body */
+}
+
+.achievement-stat {
+    width: calc(33.33% - 20px); /* Adjust stat width as needed */
+    margin: 20px ; /* Apply margin to keep stats spaced properly */
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.achievement-stat:hover {
+    transform: scale(1.05); /* Increase the size slightly on hover */
+}
+
+.achievement-stat img {
+    max-width: 80px; /* Adjust the icon size */
+    margin-bottom: 10px;
+}
+
+.achievement-stat h3 {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.achievement-stat p {
+    font-size: 16px;
+}
+
+/* Style the What We Offer section */
+#what-we-offer {
+    background-color: #F9F9F9; /* Set a background color */
+    padding: 80px 50px;
+    text-align: center;
+}
+
+/* Style the section heading */
+.section-heading h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #3EA055; /* Green color for agriculture theme */
+}
+
+/* Style the offer content layout */
+.offer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.offer-image img {
+    max-width: 50%;
+    height: auto;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the offer description */
+.offer-description h3 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #3EA055; /* Green color for agriculture theme */
+}
+
+.offer-description p {
+    font-size: 16px;
+    color: #333; /* Dark text color */
+    line-height: 1.5;
+}
+
+
+/* Style the Services section with a background image */
+#services1 {
+    background-image: url('Images/Agri1.jpg'); /* Add your background image URL */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#services1 h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    opacity: 0; /* Initial opacity set to 0 */
+    transform: translateY(20px); /* Initial position */
+    animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
+}
+
+#services1 p {
+    font-size: 18px;
+    line-height: 1.6;
+    opacity: 0; /* Initial opacity set to 0 */
+    transform: translateY(20px); /* Initial position */
+    animation: fadeIn 1s ease-in-out 0.5s forwards; /* Fade-in animation with a delay */
+}
+
+/* Keyframe animation */
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+#services {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+
+/* Style the section heading */
+.section-heading h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #25442d; /* White text color */
+}
+
+.section-heading p {
+    font-size: 16px;
+    color: #25442d; /* White text color */
+    line-height: 1.5;
+}
+
+/* Style individual service sections with hover effect */
+.services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.service {
+    max-width: 300px;
+    text-align: left;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out; /* Add hover effect */
+}
+
+.service:hover {
+    transform: translateY(-5px); /* Move the card slightly upward on hover */
+}
+
+.service-icon {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.service-icon img {
+    max-width: 80px;
+    height: auto;
+}
+
+.service h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #3EA055; /* Green color for service titles */
+}
+
+.service p {
+    font-size: 16px;
+    color: #333; /* Dark text color */
+    line-height: 1.5;
+}
+
+/* Testimonials Section Styles */
+#testimonials {
+    background-color: #f8f8f8;
+    padding: 40px 40px;
+    text-align: center;
+}
+
+#testimonials h2 {
+    color: #2A7E48;
+    padding: 10px;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial:hover {
+    transform: translateY(-10px);
+}
+
+.testimonial-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.customer-name {
+    font-weight: bold;
+    color: #FF9900;
+    font-size: 20px;
+}
+
+/* Service Process Section Styles */
+#service-process {
+    background-color: #fff;
+    padding: 40px 40px;
+    margin-bottom: 30px;
+}
+
+.process-step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.step-number {
+    width: 60px;
+    height: 50px;
+    background-color: #FF9900;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    animation: scaleUp 0.5s ease-in-out alternate infinite;
+}
+
+.step-description h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.step-description p {
+    font-size: 18px;
+    color: #666;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+.register-content {
+    text-align: center;
+}
+
+ /* about us section */
+
+ .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Section Styles */
+.section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+
+
+
+
+.introduction {
+    background-image: url('images/farm-landscape.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    opacity: 0; /* Initial opacity set to 0 */
+    transform: translateY(20px); /* Initial position */
+    animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
+}
+
+.intro-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    opacity: 0; /* Initial opacity set to 0 */
+    transform: translateY(20px); /* Initial position */
+    animation: fadeIn 1s ease-in-out 0.5s forwards; /* Fade-in animation with a delay */
+}
+
+/* Keyframe animation */
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Updated History Section Styles */
+
+.history {
+    background-color: #f7f7f7; /* Light gray background color for history */
+    color: #333;
+    padding: 50px 0;
+    text-align: center;
+    position: relative; /* Added for pseudo-element animation */
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    opacity: 0; /* Initial opacity for animation */
+    transform: translateY(20px); /* Initial position for animation */
+}
+
+.timeline-year {
+    font-size: 24px;
+    font-weight: bold;
+    color: #555;
+}
+
+.timeline-content {
+    flex: 1;
+    text-align: left;
+}
+
+.timeline-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Animation for timeline items */
+.timeline-item:nth-child(even) {
+    animation: slideInRight 1s ease-in-out forwards;
+}
+
+.timeline-item:nth-child(odd) {
+    animation: slideInLeft 1s ease-in-out forwards;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateY(20px) translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateY(20px) translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+    }
+}
+
+
+
+/* Updated Mission and Values Section Styles */
+
+.mission-values {
+    background-color: #4db6ac; 
+    padding: 50px 0;
+    text-align: center;
+    height: 400px; 
+    overflow: hidden; 
+}
+
+.mission-values h2 {
+  color: #fff;
+}
+
+.mission-items {
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s;
+    gap: 20px;
+    align-items: flex-start; 
+}
+
+.mission-item {
+    flex-basis: calc(50% - 20px); 
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    text-align: center; 
+    transition: transform 0.7s ease-in-out 0.2s; 
+}
+
+.mission-item:hover {
+    transform: scale(1.03); 
+    transition: transform 0.7s ease-in-out;
+}
+
+.icon img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0 auto;
+    transition: opacity 0.3s;
+}
+
+.text {
+    display: none;
+    padding-top: 20px;
+}
+
+.mission-item:hover .text {
+    display: block;
+}
+
+.text h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.text ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+
+
+
+
+
+/* Team Members Section */
+#team-members {
+    background-color: #e5f5e5; 
+    color: #333; 
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+    text-align: center; 
+}
+
+.team-member img {
+    width: 120px; 
+    height: 120px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    display: block; 
+    margin: 0 auto;
+}
+
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+
+/* CSS for FAQ Section */
+
+#faq {
+    background-color: #f7f7f7; 
+    color: #333; 
+    text-align: center;
+    padding: 100px 0;
+    height: 600px;
+}
+
+#faq h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold; 
+}
+
+.faq-list {
+    justify-content: space-between;
+}
+
+.faq-item {
+    flex: 0 0 calc(50% - 20px); 
+    background-color: #fff; 
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s; 
+}
+
+.faq-item:hover {
+    transform: scale(1.02); 
+    cursor: pointer;
+}
+
+.faq-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.answer {
+    display: none; 
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.faq-item:hover .answer {
+    display: block; 
+    margin-top: 10px;
+}
+
+/* contact us information */
+
+#contact-us {
+    background-image: url('images/pexels-luis-dalvan-1770809.jpg'); /* Replace with your image URL */
+     background-size: cover;
+    background-position: center;
+    height: 300px; /* Adjust the height as needed */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.contact-us-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-text  {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px;
+    opacity: 0; /* Initial opacity set to 0 */
+    transform: translateY(20px); /* Initial position */
+    animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
+
+/* Style the contact-info section */
+#contact-info {
+    background-color: #f7f7f7;
+    padding: 50px 0;
+    text-align: center;
+    
+}
+
+/* Style the container */
+.container2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Style the contact-icons */
+.contact-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-basis: 30%;
+}
+
+/* Style the contact-icon items */
+.contact-icon {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-icon img {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Adds space between the icon and text */
+}
+
+.contact-icon h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.contact-icon p {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Add hover effect to contact-icons */
+.contact-icon:hover {
+    transform: scale(1.05);
+}
+
+/* Style the contact-description */
+.contact-description {
+    flex-grow: 1;
+    flex-basis: 60%;
+    text-align: left;
+}
+
+.contact-description h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-description p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+
+
+
+
+
+/* Style for the section */
+#query-form-section {
+    background-image: url('Images/pexels-polina-kovaleva-6788339.jpg'); /* Change to your desired background color */
+    padding: 20px;
+}
+.contact-container h2 {
+    color: #fff;
+}
+
+/* Style for the query form */
+#contact-form {
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5)); /* Transparent gradient background for the "glass" effect */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Box shadow for the "glass" effect */
+    max-width: 500px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center align the form horizontally */
+}
+
+.contact-label {
+    color: #333; /* Label text color */
+}
+
+.contact-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque white background for input fields */
+}
+
+.contact-button {
+    background-color: #008080; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #005050; /* Button background color on hover */
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+/* Styling for the pop-up content */
+.popup-content {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* Styling for the tick image */
+.popup-content img {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+
+
+
+/* Admin dash board css styling section */
+
+
+
+
+
+
+
+
+/* Google Maps */
+
+.full-width-map {
+    width: 100%;
+    height: 400px; /* Make it full viewport height */
+    position: relative;
+    overflow: hidden;
+    
+}
+
+/* Style for the embedded map */
+.full-width-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove iframe border */
+}
+
+
+/* Style the footer section */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 30px;
+    text-align: center;
+   
+}
+
+/* Style footer content */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.footer-logo h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.footer-social h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-social li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-social img {
+    max-width: 30px;
+}
+
+/* Style footer bottom */
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+

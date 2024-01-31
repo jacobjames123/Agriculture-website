@@ -1,0 +1,209 @@
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Agro</title>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+            <link rel="stylesheet" href="styles.css">
+
+        </head>
+        <body>
+            <header>
+            <nav>
+                <div class="logo"> <!-- Your logo or site name here -->
+                    <a href="Home.html">Agro</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <!-- <li><a href="#">Login/Register</a></li> -->
+                </ul>
+                <button id="loginRegisterLink" class="login-popup">Login</button>
+            </nav>
+        </header>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>welcome back</h2>
+                <div class="container">
+                    <div class="form-container">
+                        
+                        <div class="login-form">
+                            <h2>Login</h2>
+                            <form action="login.php" method="post">
+                                <label for="login-username">Username:</label>
+                                <input type="text" id="login-username" name="login-username" required>
+        
+                                <label for="login-password">Password:</label>
+                                <input type="password" id="login-password" name="login-password" required>
+        
+                                <button type="submit">Login</button>
+                                <button id="showRegisterModal" class="register-button">Register</button>
+                            </form>
+                        </div> 
+        
+                        <!-- registration Form -->
+                        <div class="registration-form" style="display: none;">
+                            <h2>Register</h2>
+                            <form action="register.php" method="post">
+                                <label for="reg-username">Full Name:</label>
+                                <input type="text" id="reg-username" name="reg-username" required>
+        
+                                <label for="reg-email">Email:</label>
+                                <input type="email" id="reg-email" name="reg-email" required>
+        
+                                <label for="reg-password">Password:</label>
+                                <input type="password" id="reg-password" name="reg-password" required>
+        
+                                <button type="submit">Register</button>
+                                <a href="#" id="loginLink">Already have an account? Login</a>
+                            </form>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+
+        <section id="contact-us" class="section">
+            <div class="contact-us-container">   
+                    <h1 class="contact-text">Contact Us for Any Queries or Assistance</h1>    
+                </div>
+        </section>   
+
+        <section id="contact-info" class="section">
+            <div class="container2">
+                <div class="contact-icons">
+                    <div class="contact-icon">
+                        <img src="Images/home.gif" alt="Address Icon">
+                        <h3>Address</h3>
+                        <p>123 Main Street, Pettah, Sri Lanka</p>
+                    </div>
+                    <div class="contact-icon">
+                        <img src="Images/email.gif" alt="Email Icon">
+                        <h3>Email</h3>
+                        <p>Agro@gmail.com</p>
+                    </div>
+                    <div class="contact-icon">
+                        <img src="Images/calling.gif" alt="Phone Icon">
+                        <h3>Contact Number</h3>
+                        <p>+1 (123) 456-7890</p>
+                    </div>
+                </div>
+                <div class="contact-description">
+                    <h2>Contact Us</h2>
+                    <p>
+                        We'd love to hear from you! Whether you have a question, feedback, or just want to say hello,
+                        don't hesitate to reach out using the contact information provided above.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        
+           <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <p>Request Submitted, Thank You <img src="Images/double-check.gif" alt="Tick"></p>
+            </div>
+        </div>
+
+        <section id="query-form-section" class="section">
+            <div class="container">
+                <div class="contact-container">
+                    <h2>Any queries</h2>
+                    <form id="contact-form" method="POST" action="query_form.php" onsubmit="showPopup()">
+                        <label for="name" class="contact-label">Name:</label>
+                        <input type="text" id="name" name="name" class="contact-input" required>
+        
+                        <label for="email" class="contact-label">Email:</label>
+                        <input type="email" id="email" name="email" class="contact-input" required>
+        
+                        <label for="message" class="contact-label">Message:</label>
+                        <textarea id="message" name="message" class="contact-input" rows="4" required></textarea>
+        
+                        <button type="submit" class="contact-button">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section id="map" class="full-width-map">
+            <iframe
+                width="100%"
+                height="200"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d50450.42620994204!2d79.84567730915677!3d6.9275716128632725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2slk!4v1696395379240!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+            ></iframe>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <h1>Agro</h1>
+                    </div>
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="Home.html">Home</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="aboutus.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-social">
+                        <h2>Follow Us</h2>
+                        <ul>
+                            <li><a href="#"><img src="images/facebook.png" alt="Facebook"></a></li>
+                            <li><a href="#"><img src="images/twitter.png" alt="Twitter"></a></li>
+                            <li><a href="#"><img src="images/instagram.png" alt="Instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2023 Agro. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+       // Function to show the pop-up message
+       function showPopup() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has("submitted")) {
+        var popup = document.querySelector(".popup");
+        popup.style.display = "block";
+        // You can close the pop-up after a certain time if needed
+        setTimeout(function () {
+            popup.style.display = "none";
+        }, 3000); // Close the pop-up after 3 seconds (adjust as needed)
+    }
+}
+
+function closePopup() {
+    var popup = document.querySelector(".popup");
+    popup.style.display = "none";
+}
+
+// Call the showPopup function when the page loads
+window.addEventListener("load", showPopup);
+        </script>
+
+            
+</body>
+</html>
+
+        
+
+        
+
+

@@ -1,0 +1,355 @@
+/* Reset some default styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    
+    margin: 0;
+}
+
+header {
+    background-color: #4dffe1;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+nav {
+    padding: 0 10px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Use flexbox to arrange items horizontally */
+}
+
+nav ul li {
+    margin-right: 20px; /* Add some spacing between menu items */
+}
+
+nav a {
+    display: inline-block; /* Display menu items horizontally */
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+nav a img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+nav a:hover {
+    background-color: #89ff93;
+    color: #fff;
+}
+
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    height: 75vh; /* Ensure it takes the full viewport height */
+}
+
+.user-count {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.user-count h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #45d669;
+}
+
+.user-count p {
+    font-size: 36px;
+    font-weight: bold;
+    color: #45d669;
+}
+
+
+/* Section styles */
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Logout button styles */
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #89ff93;
+}
+
+ /* user management section */
+
+ /* User Management Section Styles */
+#user-management {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: none; /* Make it a flex container */
+    justify-content: space-between; /* Distribute elements horizontally */
+}
+
+.user-form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 20px; /* Add margin between forms */
+}
+
+.user-form:last-child {
+    margin-right: 0; /* Remove margin from the last form */
+}
+
+.user-form h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.user-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.user-form input[type="text"],
+.user-form input[type="email"],
+.user-form input[type="password"],
+.user-form select,
+.user-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.user-form textarea {
+    resize: vertical; /* Allow vertical resizing of textareas */
+}
+
+.user-form button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+/* Notification section */
+
+/* Add this CSS to your existing styles or create a new stylesheet */
+#notifications {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    
+}
+
+.notification {
+    display: flex;
+    margin: 0 0 0 10px;
+    background-color: #fff;
+    padding: 10px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.notification-icon {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-icon img {
+    width: 40px; /* Adjust the size of the notification icon */
+    height: 40px; /* Adjust the size of the notification icon */
+}
+
+.notification-content {
+    flex: 5;
+    padding-left: 10px;
+}
+
+.notification strong {
+    font-weight: bold;
+}
+
+.notification-time {
+    color: #888;
+    font-size: 14px;
+}
+
+
+/* message notifications*/
+
+#email-notifications {
+    display: none; /* Hide the email notifications section */
+}
+
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #3EA055; /* Change background color to green */
+    color: #fff;
+    margin: 0;
+}
+
+/* Table Styles */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #f9f9f9; /* Change background color to a light gray */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Header Cell Styles */
+th {
+    background-color: #3EA055; /* Change background color to green */
+    color: #fff;
+    font-weight: bold; /* Make the header cells bold */
+}
+
+.badge {
+    background-color: #3EA055; /* Green background color */
+    color: #fff; /* Text color for the badge */
+    padding: 3px 8px; /* Adjust padding as needed */
+    border-radius: 50%; /* Make it a circle by setting border-radius to 50% */
+}
+
+
+
+
+/* New section for Users styles */
+.new-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #35c0eb;
+    color: #587a96;
+    padding: 10px 20px;
+}
+
+/* User Profile Section */
+.user-profile {
+    text-align: center;
+}
+
+.user-profile h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.user-profile img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+.user-profile p {
+    margin: 5px 0;
+}
+
+.user-profile .edit-profile {
+    display: block;
+    text-decoration: none;
+    color: #587a96;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.user-profile .edit-profile:hover {
+    text-decoration: none;
+}
+
+/* Navigation Menu */
+.dashboard-nav ul {
+    list-style-type: none;
+}
+
+.dashboard-nav ul li {
+    margin-right: 20px;
+}
+
+.dashboard-nav ul li a {
+    color:#587a96;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dashboard-section {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.dashboard-section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.dashboard-section h4 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.dashboard-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+

@@ -1,0 +1,225 @@
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Agro</title>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <body>
+            <header>
+            <nav>
+                <div class="logo"> <!-- Your logo or site name here -->
+                    <a href="Home.html">Agro</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <!-- <li><a href="#">Login/Register</a></li> -->
+                </ul>
+                <button id="loginRegisterLink" class="login-popup">Login</button>
+            </nav>
+        </header>
+
+      
+
+
+        <section class="introduction">
+            <div class="container">
+                <div class="intro-text">
+                    <h1>Welcome to Agriculture Farming</h1>
+                    <p>Empowering Farmers and Promoting Sustainable Agriculture</p>
+                </div>
+            </div>
+        </section>
+    
+        <section class="history">
+            <div class="container">
+                <h2>Our History</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Foundation of Our Organization</h3>
+                            <p>We started our journey in the world of agriculture.</p>
+                        </div>
+                        <div class="timeline-year"> Since 2000</div>
+                    </div>
+                    <!-- Add more timeline items here -->
+                </div>
+            </div>
+        </section>
+        
+        
+    
+        <section class="mission-values">
+            <div class="container">
+                <h2>Our Mission and Values</h2>
+                <div class="mission-items">
+                    <div class="mission-item">
+                        <div class="icon">
+                            <img src="Images/leadership.png" alt="Mission Icon">
+                        </div>
+                        <div class="text">
+                            <h3>Our Mission</h3>
+                            <p>To promote sustainable farming practices and ensure food security through education and support.</p>
+                        </div>
+                    </div>
+                    <div class="mission-item">
+                        <div class="icon">
+                            <img src="Images/human-resources.png" alt="Values Icon">
+                        </div>
+                        <div class="text">
+                            <h3>Our Values</h3>
+                            <ul>
+                                <li>Commitment to Sustainability</li>
+                                <li>Farmers' Well-being</li>
+                                <li>Continuous Learning</li>
+                                <li>Community Engagement</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>welcome back</h2>
+                <div class="container">
+                    <div class="form-container">
+                        
+                        <div class="login-form">
+                            <h2>Login</h2>
+                            <form action="login.php" method="post">
+                                <label for="login-username">Username:</label>
+                                <input type="text" id="login-username" name="login-username" required>
+        
+                                <label for="login-password">Password:</label>
+                                <input type="password" id="login-password" name="login-password" required>
+        
+                                <button type="submit">Login</button>
+                                <button id="showRegisterModal" class="register-button">Register</button>
+                            </form>
+                        </div> 
+        
+                        <!-- registration Form -->
+                        <div class="registration-form" style="display: none;">
+                            <h2>Register</h2>
+                            <form action="register.php" method="post">
+                                <label for="reg-username">Full Name:</label>
+                                <input type="text" id="reg-username" name="reg-username" required>
+        
+                                <label for="reg-email">Email:</label>
+                                <input type="email" id="reg-email" name="reg-email" required>
+        
+                                <label for="reg-password">Password:</label>
+                                <input type="password" id="reg-password" name="reg-password" required>
+        
+                                <button type="submit">Register</button>
+                                <a href="#" id="loginLink">Already have an account? Login</a>
+                            </form>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+        
+    
+        <!-- Team Members Section -->
+        <section id="team-members" class="section fade-in">
+            <div class="container">
+                <h2>Meet Our Team</h2>
+                <div class="team-member">
+                    <img src="Images/Zinedine_Zidane.jpg" alt="Team Member 1">
+                    <h3>Zidane</h3>
+                    <p>Founder</p>
+                    <p>Zidane is one of the founders of our organization. He plays a crucial role in our mission and has contributed significantly to our growth.</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="Images/Mourinho.jpg" alt="Team Member 2">
+                    <h3>Mourinho</h3>
+                    <p>Chairman</p>
+                    <p>Mourinho is the chairman of our organization. He plays a crucial role in contributing significantly to our growth.</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="Images/Emery.jpg" alt="Team Member 1">
+                    <h3>Unai Emery</h3>
+                    <p>CEO</p>
+                    <p>Lastly, Unai Emery who is the CEO of our organization. He is soley responsible for bringing the company at its best level.</p>
+                </div>
+                
+            </div>
+        </section>
+    
+        <!-- how it started -->
+        <section id="faq" class="section fade-in">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>What are sustainable farming practices?</h3>
+                        <p class="answer">Sustainable farming practices aim to minimize the environmental impact of agriculture while ensuring long-term profitability. These practices include crop rotation, organic farming, and efficient water management.</p>
+                        
+                    </div>
+                    <div class="faq-item">
+                        <h3>How can I improve soil health on my farm?</h3>
+                        <p class="answer">Soil health can be improved through techniques like cover cropping, reduced tillage, and adding organic matter. These practices enhance soil fertility and reduce erosion.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What is the importance of biodiversity in agriculture?</h3>
+                        <p class="answer">Biodiversity is crucial in agriculture as it promotes natural pest control, improves soil health, and enhances crop resilience. It also contributes to a more sustainable and balanced ecosystem.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How can I reduce pesticide use on my farm?</h3>
+                        <p class="answer">You can reduce pesticide use by implementing integrated pest management (IPM) strategies, using biological control methods, and regularly monitoring pest populations.</p>
+                    </div>
+                    <!-- Add more FAQ items here -->
+                </div>
+            </div>
+        </section>
+        
+        
+
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <h1>Agro</h1>
+                    </div>
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="Home.html">Home</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="aboutus.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-social">
+                        <h2>Follow Us</h2>
+                        <ul>
+                            <li><a href="#"><img src="images/facebook.png" alt="Facebook"></a></li>
+                            <li><a href="#"><img src="images/twitter.png" alt="Twitter"></a></li>
+                            <li><a href="#"><img src="images/instagram.png" alt="Instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2023 Agro. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+
+
+   
+
+<body>
+    
+</body>
+</html>
